@@ -1,0 +1,72 @@
+.card-container {
+  height: 100%;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card-item {
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 2px 2px 1px #ccc;
+          box-shadow: 0px 2px 2px 1px #ccc;
+  width: 250px;
+  margin: 1rem 0.5rem;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.card-img {
+  position: relative;
+  background: #f0f0f0;
+  height: auto;
+}
+
+.card-img span {
+  position: absolute;
+  padding: 5px 10px;
+  background: #306fe2;
+  color: #fff;
+  top: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-transform: uppercase;
+}
+
+.card-img img {
+  height: 200px;
+  width: auto;
+}
+
+.card-details {
+  padding: 8px;
+}
+
+@media screen and (max-width: 563px) {
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-item {
+    width: 95%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .text-dark {
+    font-size: 100%;
+  }
+}
+/*# sourceMappingURL=card.css.map */

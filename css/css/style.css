@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  font-size: 14px;
+  color: white;
+  background-image: url("../images/eyes-portrait-person-girl-18495.jpg");
+  background-size: contain;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 505;
+}
+
+a:hover {
+  color: coral;
+  text-decoration: none;
+}
+
+.nav a:active {
+  -webkit-text-decoration: coral;
+          text-decoration: coral;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 3rem;
+  background: black;
+  position: fixed;
+  width: 100vw;
+  margin-left: -15px;
+  z-index: 1;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90vw;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input {
+  height: 25px;
+  padding: 1px 5px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+button {
+  background: none;
+  margin: 0 10px 0 10px;
+  border: none;
+}
+
+.search-img {
+  width: 20px;
+  height: 20px;
+}
+
+section {
+  padding: 2  0vh;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+p {
+  text-align: justify;
+}
+
+.welcome {
+  width: 75vw;
+}
+
+.about {
+  background: #dbdbdb;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    color: coral;
+  }
+  .burg > div {
+    display: none;
+    height: 4px;
+    width: 30px;
+    background: coral;
+    margin: 4px;
+  }
+  h1.display-3 {
+    font-size: 2rem;
+  }
+  header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem;
+  }
+  .burg {
+    padding-right: 20px;
+  }
+  .burg > div {
+    display: block;
+  }
+  .nav {
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 70vh;
+    width: 100vw;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 20px;
+    top: 0;
+    right: 10px;
+    -webkit-clip-path: circle(0px at 90% -10%);
+            clip-path: circle(0px at 90% -10%);
+    background: #4b4b4b;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+  }
+  .nav.open {
+    -webkit-clip-path: circle(1000px at 90% -10%);
+            clip-path: circle(1000px at 90% -10%);
+  }
+}
+/*# sourceMappingURL=style.css.map */

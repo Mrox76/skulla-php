@@ -1,0 +1,45 @@
+section {
+  padding: 5rem 3rem;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#e75519), to(#F09819));
+  background: linear-gradient(to right, #e75519, #F09819);
+}
+
+.wellcome {
+  width: 45vw;
+}
+
+#search > img {
+  width: 30px;
+}
+
+@media screen and (max-width: 816px) {
+  section {
+    padding: 1rem;
+  }
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .wellcome {
+    width: 80vw;
+  }
+}
+/*# sourceMappingURL=hero.css.map */

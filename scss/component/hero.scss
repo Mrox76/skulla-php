@@ -1,0 +1,35 @@
+section{
+    padding: 5rem 3rem;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #e75519, #F09819);
+}
+
+.wellcome{
+    width: 45vw;
+}
+
+#search > img{
+    width: 30px;
+}
+
+@media screen and(max-width: 816px){
+
+    section{
+        padding: 1rem;
+    }
+
+    .hero{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .wellcome{
+        width: 80vw;
+    }   
+
+}

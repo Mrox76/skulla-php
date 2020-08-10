@@ -1,0 +1,65 @@
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+li.nav-link > a{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media screen and(max-width: 816px){
+
+    header.header{
+        position: relative;
+    }
+
+    .menu{
+        cursor: pointer;
+   
+    }
+
+    .menu > div{
+        background: #fff;
+        margin: 4px;
+        height: 4px;
+        width: 30px;
+        transition: all 1s ease;
+    }
+
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2{
+        opacity: 0;
+    }
+
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px, -6px)  ;
+    }
+
+    .nav{
+        position: absolute;
+        flex-direction: column;
+
+        justify-content: space-evenly;
+        right: 0;
+        top: 0;
+        padding-top: 4rem;
+        height: 70vh;
+        width: 100%;
+        background: rgb(75, 75, 75);
+        clip-path: circle(0px at 100% -0%);
+        transition: all 1s ease-out;
+        z-index: -1;
+    }
+
+    .nav.open{
+        clip-path: circle(1000px at 90% -10%);
+    }
+}

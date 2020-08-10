@@ -1,0 +1,48 @@
+h1, .t-h-1 {
+  padding: 1rem 0;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+h2, .t-h-2 {
+  font-size: 2rem;
+  padding: 0 0 2.5rem 0;
+  font-weight: 650;
+  color: #999999;
+  margin-top: 2rem;
+}
+
+h3, .t-h-3 {
+  font-size: 1.2rem;
+  font-weight: 650;
+  color: #5c5c5c;
+  padding-top: 1rem;
+}
+
+h4, .card-details > h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+p {
+  text-align: justify;
+  color: #fff;
+}
+
+.card-details > p {
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 816px) {
+  .t-h-1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
+/*# sourceMappingURL=typography.css.map */

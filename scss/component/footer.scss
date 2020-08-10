@@ -1,0 +1,19 @@
+footer{
+    height: 50vh;
+    background: #333333;
+    padding-top: 5rem;
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem ;
+}
+
+.s-m-item{
+    background-color: blanchedalmond;
+    border-radius: 100%;
+    margin: 5px;
+    padding: 5px 10px;
+}
