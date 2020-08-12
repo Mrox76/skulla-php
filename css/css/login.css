@@ -7,6 +7,7 @@
   top: 0;
   background: #000;
   background: rgba(0, 0, 0, 0.7);
+  overflow: scroll;
 }
 
 .sign-content {
@@ -14,7 +15,7 @@
   position: relative;
   font-size: 16px;
   display: block;
-  width: 50%;
+  width: 40%;
   background: #fff;
   margin: 5% auto 15% auto;
   border: 1px solid #999;
@@ -25,6 +26,7 @@
   border-bottom-right-radius: 40px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
+  overflow: scroll;
 }
 
 input {

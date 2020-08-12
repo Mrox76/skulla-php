@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./bootstrap/css/fontawesome.min.css">
 
+
     <title>SKULLA &REG;</title>
+
 </head>
 <body>
     <div class="container-fluid">
@@ -29,7 +31,7 @@
                     <li class="nav-link"><a href="#">blog</a></li>
                     <li class="nav-link"><a href="#">contactos</a></li>
                     <li class="nav-link  btn btn-outline-light" onclick="document.querySelector('.login').style.display='block'"><a href="#">entrar</a></li>
-                    <li class="nav-link btn btn-light" onclick="document.querySelector('.signup').style.display='block'"><a href="#">registrar</a></li>
+                    <li class="nav-link btn btn-light" onclick="document.querySelector('.register').style.display='block'"><a href="#">registrar</a></li>
                 </ul>
             </nav>
             <div class="menu">
@@ -45,7 +47,7 @@
                 <form action="">
                     <input type="text" class="input-search" placeholder="O que deseja aprender?" class="form-control" style="width: 100%; padding: 8px; border: 1px solid #eee;">
                     <button type="submit" name="" id="search" class="btn">
-                    <img src="./assets/search.png" alt=""></button>
+                    <img src="./assets/images/hero/search.png" alt=""></button>
                 </form>
             </div>
             <img class="hero-computer" src="./assets/images/hero/skulla.png" alt="">
@@ -185,15 +187,15 @@
     </div>
 
     <div class="sign login">
-        <form class="sign-content animate">
+        <form class="sign-content animate ">
             <div class="imgcontainer text-center">
                 <span class="close" onclick="document.querySelector('.login').style.display='none'">&times;</span>
                 <img src="./assets/images/avatar/photo_17.png" alt="Avatar" class="avatar"> 
             </div>
             <div class="container">
 
-                    <label for="uname"><strong>Username</strong></label>
-                    <input type="text" placeholder="username@exemple.com" name="username" required>
+                    <label for="uname"><strong>E-mail</strong></label>
+                    <input type="text" placeholder="username@example.com" name="email" required>
                 
                     <label for="password"><strong>Password</strong></label>
                     <input type="password" placeholder="Enter password" name="password" required> 
@@ -208,31 +210,33 @@
         </form>
     </div>
 
-    <div class="sign signup">
-        <form action="#" class="sign-content animate">
+    <div class="sign register">
+        <form action="#" class="sign-content animate js-register">
             <h1 class="text-center text-dark">REGISTRAR-SE</h1>
-            <span class="close" onclick="document.querySelector('.signup').style.display='none'">&times;</span>
+            <span class="close" onclick="document.querySelector('.register').style.display='none'">&times;</span>
             <div class="container">
                 <label for="uname"><strong>Username</strong></label>
                 <input type="text" placeholder="Enter username" name="uname" required>
             
+                <label for="email"><strong>Email</strong></label>
+                <input type="email" placeholder="username@example.com" name="email" required>
+
                 <label for="password"><strong>Password</strong></label>
                 <input type="password" placeholder="Enter password" name="password" required> 
-    
-                <label for="password"><strong>Repeat Password</strong></label>
-                <input type="password" placeholder="Reenter password" name="password" required> 
+
+                <div class="js-error text-danger" style="display: none; padding-top: 15px; ">teste</div>
     
                 <button class="btn btn-primary loginbtn">Registrar-se</button>
             </div>
     
             <div class="container">
-                <button class="btn btn-danger cancelbtn" onclick="document.querySelector('.signup').style.display='none'">Cancel</button>
+                <button type="submit" class="btn btn-danger cancelbtn" onclick="document.querySelector('.register').style.display='none'">Cancel</button>
             </div>
         </form>
        
     </div>
-    
-    <script src="./assets/js/app.js"></script>
-    <script src="./assets/js/validate.js"></script>
+
+    <?php require_once "inc/footer.php"; ?> 
+    <script src="./bootstrap/js/jquery-3.5.1.min.js"></script>
 </body>
 </html>
