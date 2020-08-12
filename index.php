@@ -185,7 +185,7 @@
             <div class="container">
 
                     <label for="uname"><strong>Username</strong></label>
-                    <input type="text" placeholder="Enter username" name="uname" required>
+                    <input type="text" placeholder="username@exemple.com" name="username" required>
                 
                     <label for="password"><strong>Password</strong></label>
                     <input type="password" placeholder="Enter password" name="password" required> 
