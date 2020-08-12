@@ -1,3 +1,10 @@
+<?php
+	// Allow the config
+	define('__CONFIG__', true);
+	// Require the config
+	require_once "inc/config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +48,7 @@
                     <img src="./assets/search.png" alt=""></button>
                 </form>
             </div>
-            <img class="hero-computer" src="./assets/skulla.png" alt="">
+            <img class="hero-computer" src="./assets/images/hero/skulla.png" alt="">
             <p class="fa-arrow-down" style="position: absolute; bottom: 0; margin: 0 50%;"></p>            
         </section>
         <section class="cards-container">
@@ -50,7 +57,7 @@
                 <div class="card-item">
                     <div class="card-img text-center">
                         <span>novo</span>
-                        <img src="./assets/kisspng-html-web-design-scalable-vector-graphics-world-wid-html5-icon-hd-5ab0c85c377aa0.0639325615215350682273.png" alt="">
+                        <img src="./assets/images/card/html.png" alt="HTML icon">
                     </div>
                     <div class="card-details">
                         <h3 class="t-h-3">HTML5 </h3>
@@ -61,10 +68,10 @@
                 <div class="card-item">
                     <div class="card-img text-center">
                         <span>novo</span>
-                        <img src="./assets/kisspng-sass-logo-cascading-style-sheets-scalable-vector-g-codzero-cms-blog-tool-publishing-platform-5b74aaa12bfc04.1827984715343725131802.png" alt="">
+                        <img src="./assets/images/card/css.png" alt="CSS icon">
                     </div>
                     <div class="card-details">
-                        <h3 class="t-h-3">SASS/CSS</h3>
+                        <h3 class="t-h-3">CSS</h3>
                         <p>Zacarias Torrizão</p>
                         <h4 class="t-h-4">500.00MT</h4>
                     </div>
@@ -72,7 +79,7 @@
                 <div class="card-item">
                     <div class="card-img text-center">
                         <span>novo</span>
-                        <img src="./assets/kisspng-bootstrap-responsive-web-design-web-development-lo-5af676c0755361.6918533815261016964806.png" alt="">
+                        <img src="./assets/images/card/bootstrap.png" alt="Bootstrap icon">
                     </div>
                     <div class="card-details">
                         <h3 class="t-h-3">BOOTSTRAP</h3>
@@ -83,7 +90,7 @@
                 <div class="card-item">
                     <div class="card-img text-center">
                         <span>novo</span>
-                        <img src="./assets/kisspng-javascript-logo-html-clip-art-javascript-logo-5b5188b1a2a1f9.2428698915320700656662.png" alt="">
+                        <img src="./assets/images/card/js.png" alt="JavaScript icon">
                     </div>
                     <div class="card-details">
                         <h3 class="t-h-3">JAVASCRIPT</h3>
@@ -102,7 +109,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus in, sapiente architecto.</p>
                     <div class="user">
                         <p class="text-right">Lorem, ipsum dolor.</p>
-                        <img src="./assets/photo_4.png" alt="">
+                        <img src="./assets/images/avatar/photo_4.png" alt="">
                     </div>
                 </div>
                 <div class="reviews-item">
@@ -110,7 +117,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus in, sapiente architecto.</p>
                     <div class="user">
                         <p class="text-right">Lorem, ipsum dolor.</p>
-                        <img src="./assets/photo_20.png" alt="">
+                        <img src="./assets/images/avatar/photo_20.png" alt="">
                     </div>
                 </div>
                 <div class="reviews-item">
@@ -118,7 +125,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus in, sapiente architecto.</p>
                     <div class="user">
                         <p class="text-right">Lorem, ipsum dolor.</p>
-                        <img src="./assets/photo_17.png" alt="">
+                        <img src="./assets/images/avatar/photo_17.png" alt="">
                     </div>
                 </div>
             </div>
@@ -135,28 +142,29 @@
             <h2 class="t-h-2 text-center">Nosso blog</h2>
             <div class="blog-content">
                 <div class="blog-item">
-                    <img src="./assets/man-in-grey-sweater-holding-yellow-sticky-note-879109.jpg" alt="">
+                    <img src="./assets/images/blog/intelidev.jpg" alt="photo-of-man-in-grey-sweater-holding-yellow-sticky-note">
                     <div class="blog-details">
                         <h3 class="t-h-3">Seja um inteliDev</h3>
                         <p class="text-dark">10/06/2021</p>
                     </div>
                 </div>
                 <div class="blog-item">
-                    <img src="./assets/photo-of-people-near-wooden-table-3184418.jpg" alt="">
+                    <img src="./assets/images/blog/team-work.jpg" alt="photo-of-people-near-wooden-table
+                    ">
                     <div class="blog-details">
                         <h3 class="t-h-3">Trabalhe em equipe</h3>
                         <p class="text-dark">10/06/2021</p>
                     </div>
                 </div>
                 <div class="blog-item">
-                    <img src="./assets/grayscale-photo-of-computer-laptop-near-white-notebook-and-169573.jpg" alt="">
+                    <img src="./assets/images/blog/computer-in-gray.jpg" alt="grayscale-photo-of-computer-laptop-near-white-notebook">
                     <div class="blog-details">
                         <h3 class="t-h-3">Prepare o setup</h3>
                         <p class="text-dark">10/06/2021</p>
                     </div>
                 </div>
                 <div class="blog-item">
-                    <img src="./assets/@WallpapersGram4k---2019-mirrors-edge-catalyst-5k-o8.jpg" alt="">
+                    <img src="./assets/images/blog/punching.jpg" alt="photo-of-mirrors-edge-catalyst-5k-o8">
                     <div class="blog-details">
                         <h3 class="t-h-3">Não lute com o seu código</h3>
                         <p class="text-dark">10/06/2021</p>
@@ -180,7 +188,7 @@
         <form class="sign-content animate">
             <div class="imgcontainer text-center">
                 <span class="close" onclick="document.querySelector('.login').style.display='none'">&times;</span>
-                <img src="./assets/photo_17.png" alt="Avatar" class="avatar"> 
+                <img src="./assets/images/avatar/photo_17.png" alt="Avatar" class="avatar"> 
             </div>
             <div class="container">
 
@@ -224,6 +232,7 @@
        
     </div>
     
-    <script src="./js/app.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/validate.js"></script>
 </body>
 </html>
