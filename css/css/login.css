@@ -26,13 +26,21 @@
   border-bottom-right-radius: 40px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 input {
   width: 100%;
   border: 1px solid #999;
   padding: 6px;
+}
+
+.gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 strong {

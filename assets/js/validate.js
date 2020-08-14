@@ -10,7 +10,7 @@ $(document).on("submit","form.js-register", function(event){
         password : $("input[type='password']", _form).val()
     }
 
-    if(data.email.length < 18 ){
+    if(data.email.length < 6 ){
         _error.text("Please, enter a valid email address.").show();
         return false;
     }else if(data.password.length < 8){

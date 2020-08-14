@@ -38,8 +38,8 @@
   padding: 5px 10px;
   background: #306fe2;
   color: #fff;
-  font-weight: 500;
   top: 10px;
+  left: -10px;
   border-radius: 5px;
   text-transform: uppercase;
 }
