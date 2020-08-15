@@ -215,8 +215,6 @@
             <h1 class="text-center text-dark">REGISTRAR-SE</h1>
             <span class="close" onclick="document.querySelector('.register').style.display='none'">&times;</span>
             <div class="container">
-                <label for="uname"><strong>Username</strong></label>
-                <input type="text" placeholder="Enter username" name="uname" required>
             
                 <label for="email"><strong>Email</strong></label>
                 <input type="email" placeholder="username@example.com" name="email" required>
@@ -226,17 +224,17 @@
 
                 <div class="js-error text-danger" style="display: none; padding-top: 15px; ">teste</div>
     
-                <button class="btn btn-primary loginbtn">Registrar-se</button>
+                <button class="btn btn-primary loginbtn" type="submit">Registrar-se</button>
             </div>
     
             <div class="container">
-                <button type="submit" class="btn btn-danger cancelbtn" onclick="document.querySelector('.register').style.display='none'">Cancel</button>
+                <button class="btn btn-danger cancelbtn" onclick="document.querySelector('.register').style.display='none'">Cancel</button>
             </div>
         </form>
        
     </div>
 
     <?php require_once "inc/footer.php"; ?> 
-    <script src="./bootstrap/js/jquery-3.5.1.min.js"></script>
+
 </body>
 </html>

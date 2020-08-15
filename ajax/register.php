@@ -1,29 +1,51 @@
-<?php
+<?php 
 
-// permitir o config
-define('__CONFIG__', true);
+	// Allow the config
+	define('__CONFIG__', true);
 
-// requerir o config
-require_once "../inc/config.php";
+	// Require the config
+	require_once "../inc/config.php"; 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    // sempre retornar no formato JSON
-    header('Content-type: application/json');
+	if($_SERVER['REQUEST_METHOD'] == 'POST' or 1==1) {
+		// Always return JSON format
+		header('Content-Type: application/json');
 
-    $return = [];
+		$return = [];
 
-    // verificar se o usuario existe;
+		$email = Filter::String( $_POST['email'] );
 
-    // verificar se o usuario pode ser adicionado;
+		// Make sure the user does not exist. 
+		$findUser = $con->prepare("SELECT user_id FROM users WHERE email = LOWER(:email) LIMIT 1");
+		$findUser->bindParam(':email', $email, PDO::PARAM_STR);
+		$findUser->execute();
 
-    //retornar a informação para o javascript para redirecionar.
+		if($findUser->rowCount() == 1) {
+			// User exists 
+			$return['error'] = "You already have an account";
+			// We can also check to see if they are able to log in. 
+			$return['is_logged_in'] = false;
+		} else {
+			// User does not exist, add them now. 
+			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+			
+			$addUser = $con->prepare("INSERT INTO users(email, password) VALUES(LOWER(:email), :password)");
+			$addUser->bindParam(':email', $email, PDO::PARAM_STR);
+			$addUser->bindParam(':password', $password, PDO::PARAM_STR);
+			$addUser->execute();
 
-    $return['redirect'] = '/index.php';
-    $return['name'] = "Valdmiro Aboo";
+			$user_id = $con->lastInsertId();
 
-    echo json_encode($return, JSON_PRETTY_PRINT); exit;
-}else{
-    alert("error");
-}
+			$_SESSION['user_id'] = (int) $user_id;
 
+			$return['redirect'] = '../inde.php?message=welcome';
+			$return['is_logged_in'] = true;
+
+			console.log(is_logged_in());
+		}
+
+		echo json_encode($return, JSON_PRETTY_PRINT); exit;
+	} else {
+		// Die. Kill the script. Redirect the user. Do something regardless.
+		exit('Invalid URL');
+	}
 ?>

@@ -5,7 +5,6 @@ $(document).on("submit","form.js-register", function(event){
     var _error = $(".js-error", _form);
 
     var dataObj = {
-        username : $("input[type='text']", _form).val(),
         email : $("input[type='email']", _form).val(),
         password : $("input[type='password']", _form).val()
     }
@@ -23,21 +22,23 @@ $(document).on("submit","form.js-register", function(event){
     $.ajax({
         type: 'POST',
         url: './ajax/register.php',
-        data: 'dataObj',
+        data: dataObj,
         dataType: 'json',
         async: 'true',
     }).done(function ajaxDone(data){
         // quelquer que sejam os dados;
-        console.log(data);
         if(data.redirect !== undefined){
-
+            windows.redirect = data.redirect;
+        }else if(data.error !== undefined){
+            _error.text(data.error).show();
         }
 
-        alert(data.name);
+    }).fail(function ajaxFailed(e){
+
     }).always(function ajaxAlwaysDoThis(data){
         console.log('always');
     })
 
     return true;
 
-});
+})
