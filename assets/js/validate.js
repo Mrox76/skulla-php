@@ -24,11 +24,11 @@ $(document).on("submit","form.js-register", function(event){
         url: './ajax/register.php',
         data: dataObj,
         dataType: 'json',
-        async: 'true',
+        async: true,
     }).done(function ajaxDone(data){
         // quelquer que sejam os dados;
         if(data.redirect !== undefined){
-            windows.redirect = data.redirect;
+            window.location = data.redirect;
         }else if(data.error !== undefined){
             _error.text(data.error).show();
         }

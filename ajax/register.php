@@ -8,7 +8,7 @@
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST' or 1==1) {
 		// Always return JSON format
-		header('Content-Type: application/json');
+		// header('Content-Type: application/json');
 
 		$return = [];
 
@@ -37,10 +37,9 @@
 
 			$_SESSION['user_id'] = (int) $user_id;
 
-			$return['redirect'] = '../inde.php?message=welcome';
+			$return['redirect'] = './index.php?message=welcome';
 			$return['is_logged_in'] = true;
 
-			console.log(is_logged_in());
 		}
 
 		echo json_encode($return, JSON_PRETTY_PRINT); exit;
