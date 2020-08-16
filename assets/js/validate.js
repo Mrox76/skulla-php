@@ -34,11 +34,11 @@ $(document).on("submit","form.js-register", function(event){
         }
 
     }).fail(function ajaxFailed(e){
-
+        // console.log(e);
     }).always(function ajaxAlwaysDoThis(data){
-        console.log('always');
-    })
+        // console.log(data);
+    });
 
     return true;
 
-})
+});
